@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WeChat</title>
+    <link rel="stylesheet" href="../css/wechat.css">
+    <link rel="stylesheet" href="../css/emoji.css">
+</head>
+
+<body>
+    <div class="alert"></div>
+    <div id="img_container">
+        <img src="" alt="" class="screen" id="img1"/>
+        <div class="screen_btn_wrap">
+            <button id="screen_delete">取消</button>
+            <button id="screen_confirm">确认</button>
+        </div>
+    </div>
+    <!-- 聊天内容 -->
+    <div class="user_container">
+        <div class="user_info">
+            <div class="user_msg">
+                <img class="user_header" src="./images/head0.jpg" alt="">
+                <span class="user_name">无情杀手</span>
+            </div>
+            <h3>在线用户</h3>
+            <ul id="online_users" class="user_list">
+                <!-- <li>
+                    <img src="./images/head0.jpg" alt="">
+                    <span>无情杀手</span>
+                </li> -->
+            </ul>
+            <h3>用户列表</h3>
+            <ul class="all_users user_list" id="allUsers">
+                <!-- <li>
+                    <img src="" alt="">
+                    <span>无情杀手</span>
+                </li> -->
+            </ul>
+        </div>
+        <div class="chat_container">
+            <h3>聊天室(<i id="userCount">0</i>)</h3>
+            <div class="chat_msg">
+                <!-- <div class="chat_tip">"baba"加入群聊</div>
+                <div class="chat_tip">"baba"离开聊天室</div>
+                <div class="my_msg">
+                    <div class="my_say">
+                        hello
+                    </div>
+                    <img class="my_head" src="./images/head0.jpg" alt="">
+                </div>
+                <div class="other_msg">
+                    <img class="other_head" src="./images/head0.jpg" alt="">
+                    <div class="other_say_row">
+                        <i class="other_name">小红</i>
+                        <div class="other_say">我很好</div>
+                    </div>
+                </div> -->
+                <!-- 你好吗gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg -->
+            </div>
+            <div class="chat_input">
+                <div class="chat_item">
+                    <div class="emoji_container">
+                        <div title="表情包" id="face_emoji">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" id="face" class="feather feather-smile">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                            </svg>
+                        </div>
+                        <div class="faceNav"></div>
+                    </div>
+                    <div title="截屏">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            id="screen" class="feather feather-scissors">
+                            <circle cx="6" cy="6" r="3"></circle>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                            <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                            <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div>
+                        <label for="file" title="图片">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-folder">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                </path>
+                            </svg>
+                        </label>
+                        <input id="file" type="file" accept=".jpg,.png" style="display:none">
+                    </div>
+                </div>
+                <div class="chat_content">
+                    <!-- 添加contenteditable属性 -->
+                    <div id="content" contenteditable></div>
+                </div>
+                <div class="chat_btn_wrap">
+                    <button id="chat_btn">发 送</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/html2canvas.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../utils/utils.js"></script>
+    <script src="../js/wechat.js"></script>
+</body>
+
+</html>
