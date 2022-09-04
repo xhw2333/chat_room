@@ -28,7 +28,9 @@ function findAll() {
 //查找特定用户 根据名字和密码
 function findByNameAndKey(name,password) {
     return new Promise((resolve, reject) => {
-        con.query(`SELECT * from user WHERE nickname='${name}' AND password='${password}'`, function (err, res) {
+        // const sql = `SELECT * from user WHERE nickname='${name}' AND password='${password}'`;
+        const sql = `SELECT * from user WHERE nickname=? AND password=?`
+        con.query(sql,[name,password], function (err, res) {
             if (err) reject(err);
             else resolve(res);
         })
@@ -84,7 +86,11 @@ function updateUser(){
 
 
 
-
+findByNameAndKey('xhw','123456').then(res=>{
+    console.log(res);
+}).catch(err=>{
+    console.log(err);
+})
 
 module.exports = {
     findAll,
