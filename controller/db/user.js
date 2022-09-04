@@ -41,6 +41,7 @@ function findByNameAndKey(name,password) {
 //查找特定用户 根据邮箱
 function findByNameAndEmail(name,email) {
     return new Promise((resolve, reject) => {
+        // test
         con.query(`SELECT * from user WHERE nickname='${name}' OR email='${email}'`, function (err, res) {
             if (err) reject(err);
             else resolve(res);
